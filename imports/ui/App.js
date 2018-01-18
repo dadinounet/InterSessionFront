@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {render} from "react-dom";
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from './Home';
+import Login from './Login';
 
 Meteor.startup(() => {
     render(
@@ -9,7 +9,7 @@ Meteor.startup(() => {
             <h1>Security Scanner</h1>
             <BrowserRouter>
                 <Switch>
-                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/" component={Login}/>
                 </Switch>
             </BrowserRouter>
         </div>,
