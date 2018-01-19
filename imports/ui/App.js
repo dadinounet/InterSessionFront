@@ -6,8 +6,7 @@ import Login from './Login';
 Meteor.startup(() => {
     render(
         <div className="container">
-            <h1>Security Scanner</h1>
-            <BrowserRouter>
+                <BrowserRouter>
                 <Switch>
                     <Route exact path="/" component={Login}/>
                 </Switch>

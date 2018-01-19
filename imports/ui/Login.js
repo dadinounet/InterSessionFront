@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 
 class Login extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            'username': '',
+            'password': ''
+        }
+    }
+
     showLoginInfo() {
         $('.b-form').css("opacity","0.01");
         $('.box-form').css("left","-37%");
@@ -46,8 +54,8 @@ class Login extends Component {
                         <p><button onClick={this.hideLoginInfo} className='b b-info i i-left' title='Back to Sign In'></button><span>Need Help?</span>
                         </p>
                         <div className='line-wh'></div>
-                        <button className='b-support' title='Forgot Password?'> Forgot Password?</button>
-                        <button className='b-support' title='Contact Support'> Contact Support</button>
+                        <button className='b-support btn btn-defaut' title='Forgot Password?'> Forgot Password?</button>
+                        <button className='b-support btn btn-default' title='Contact Support'> Contact Support</button>
                         <div className='line-wh'></div>
                         <button className='b-cta' title='Sign up now!'> CREATE ACCOUNT</button>
                     </div>
