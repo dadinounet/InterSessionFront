@@ -30,7 +30,7 @@ class Login extends Component {
                         </div>
                         <div className='box-login'>
                             <div className='fieldset-body' id='login_form'>
-                                <button onClick={this.showLoginInfo} className='b b-form i i-more' title='Mais Informações'></button>
+                                <button onClick={this.showLoginInfo} className='b b-form i i-more' title='More informations'></button>
                                 <p className='field'>
                                     <label htmlFor={'user'}>USERNAME</label>
                                     <input type='text' id='user' name='user' title='Username' />
