@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Checkbox from './components/Checkboxe';
 
 class Login extends Component {
 
@@ -42,9 +43,7 @@ class Login extends Component {
                                     <span id='valida' className='i i-close'></span>
                                 </p>
 
-                                <label className='checkbox'>
-                                    <input type='checkbox' value='TRUE' title='Keep me Signed in' /> Keep me Signed in
-                                </label>
+                                <Checkbox name="remember_me" label='Remember me'></Checkbox>
 
                                 <input type='submit' id='do_login' value='GET STARTED' title='Get Started' />
                             </div>
