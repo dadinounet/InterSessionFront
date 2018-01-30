@@ -33,19 +33,11 @@ class Login extends Component {
                             <div className='fieldset-body' id='login_form'>
                                 <button onClick={this.showLoginInfo} className='b b-form i i-more' title='More informations'></button>
                                 <p className='field'>
-                                    <label htmlFor={'user'}>USERNAME</label>
+                                    <label htmlFor={'user'}>EMAIL</label>
                                     <input type='text' id='user' name='user' title='Username' />
                                     <span id='valida' className='i i-warning'></span>
                                 </p>
-                                <p className='field'>
-                                    <label htmlFor={'pass'}>PASSWORD</label>
-                                    <input type='password' id='pass' name='pass' title='Password' />
-                                    <span id='valida' className='i i-close'></span>
-                                </p>
-
-                                <Checkbox name="remember_me" label='Remember me'></Checkbox>
-
-                                <input type='submit' id='do_login' value='GET STARTED' title='Get Started' />
+                                <input type='submit' id='do_login' value='RETRIEVE MY PASSWORD' title='Get Started' />
                             </div>
                         </div>
                     </div>
@@ -53,10 +45,8 @@ class Login extends Component {
                         <p><button onClick={this.hideLoginInfo} className='b b-info i i-left' title='Back to Sign In'></button><span>Need Help?</span>
                         </p>
                         <div className='line-wh'></div>
-                        <button className='b-support btn btn-defaut' title='Forgot Password?'> Forgot Password?</button>
                         <button className='b-support btn btn-default' title='Contact Support'> Contact Support</button>
                         <div className='line-wh'></div>
-                        <button className='b-cta' title='Sign up now!'> CREATE ACCOUNT</button>
                     </div>
                 </div>
             </div>
