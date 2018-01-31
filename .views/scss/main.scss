@@ -1,0 +1,13 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans|Quicksand:400,700';
+@import "reset";
+@import "function";
+
+html, body {
+  background: #42A5F5;
+  height: 100%;
+  font-family: 'roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@import "form";

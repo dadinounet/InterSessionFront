@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link href="../../client/main.css" rel="stylesheet">
+</head>
+<body>
+<div id="securityScanner_forms">
+    <div class='box'>
+        <div class='box-form'>
+            <div class='box-login-title'>
+                <div class='i i-login'></div>
+                <h2>LOGIN</h2>
+            </div>
+            <div class='box-login'>
+                <div class='fieldset-body' id='login_form'>
+                    <button onClick="showLoginInfo()" class='b b-form i i-more' title='More informations'></button>
+                    <p class='field'>
+                        <label for="user">EMAIL</label>
+                        <input type='text' id='email' name='email'/>
+                        <span id='valida' class='i i-warning'></span>
+                    </p>
+                    <p class='field'>
+                        <label for="pass">PASSWORD</label>
+                        <input type='password' id='pass' name='pass'/>
+                        <span id='valida' class='i i-close'></span>
+                    </p>
+                    <p class='field'>
+                        <label for="pass">CONFIRM PASSWORD</label>
+                        <input type='password' id='passRepeat' name='passRepeat'/>
+                        <span id='valida' class='i i-close'></span>
+                    </p>
+                    <p>
+                        <input type='submit' id='do_create' value='CREATE ACCOUNT'/>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class='box-info'>
+            <p>
+                <button onClick="hideLoginInfo()" class='b b-info i i-left' title='Back to Register'></button>
+                <span>Need Help?</span>
+            </p>
+            <div class='line-wh'></div>
+            <button class='b-support btn btn-defaut' title='Go to login'> Already Registered ?</button>
+            <button class='b-support btn btn-default' title='Contact Support'> Contact Support</button>
+            <div class='line-wh'></div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+    function showLoginInfo() {
+        $('.b-form').css("opacity", "0.01");
+        $('.box-form').css("left", "-37%");
+        $('.box-info').css("right", "-37%");
+    }
+
+    function hideLoginInfo() {
+        $('.b-form').css("opacity", "1");
+        $('.box-form').css("left", "0px");
+        $('.box-info').css("right", "-5px");
+    }
+</script>
+</body>
+</html>
+
+
