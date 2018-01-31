@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import {render} from "react-dom";
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Login from './Login';
 import Home from './Home';
+import Inscription from './Inscription';
+import Password from './Password';
 
 Meteor.startup(() => {
     render(
         <div className="container">
-            <h1>Security Scanner</h1>
-            <BrowserRouter>
+                <BrowserRouter>
                 <Switch>
-                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/" component={Inscription}/>
                 </Switch>
             </BrowserRouter>
         </div>,
