@@ -8,9 +8,10 @@ class Checkbox extends Component {
     }
 
     render() {
-        return (<div>
-                    <input type="checkbox" className="checkbox" ></input> {this.props.label}
-                </div>
+        return (
+            <p>
+                <input type="checkbox" className="checkbox" /> {this.props.label}
+            </p>
         )
     }
 }
