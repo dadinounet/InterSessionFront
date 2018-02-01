@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Checkbox from './components/Checkboxe';
+import Checkbox from './components/Checkbox';
 
 class Login extends Component {
 
