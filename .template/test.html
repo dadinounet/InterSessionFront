@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png"/>
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png"/>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Material Dashboard by Creative Tim</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta name="viewport" content="width=device-width"/>
+    <!-- Bootstrap core CSS     -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <!--  Material Dashboard CSS    -->
+    <link href="./assets/css/material-dashboard.css?v=1.2.0" rel="stylesheet"/>
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="./assets/css/demo.css" rel="stylesheet"/>
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet'
+          type='text/css'>
+    <style>
+        td, th {
+            vertical-align: middle !important;
+        }
+        .left, .right {
+            float:left;
+            height:100vh;
+        }
+
+        .left {
+            background: #037BB5;
+            display: inline-block;
+            white-space: nowrap;
+            width: 50px;
+            transition: width 1s ;
+        }
+
+        .right {
+            background: #fff;
+            width: 350px;
+            transition: width 1s;
+            border-style:solid;
+            border-color:#ccc;
+            border-width:1px;
+        }
+
+        .left:hover {
+            width: 250px;
+        }
+
+        .item:hover {
+            background-color:#ccc;
+        }
+
+        .left .glyphicon {
+            margin:15px;
+            width:20px;
+            color:#fff;
+        }
+
+        .right .glyphicon {
+            color:#a9a9a9;
+        }
+        span.glyphicon.glyphicon-refresh{
+            font-size:17px;
+            vertical-align: middle !important;
+        }
+
+        .item {
+            height:50px;
+            overflow:hidden;
+            color:#fff;
+        }
+        .title {
+            background-color:#eee;
+            border-style:solid;
+            border-color:#ccc;
+            border-width:1px;
+            box-sizing: border-box;
+        }
+        .search:hover {
+            border-color:#4aa9fb;
+            border-width:1px;
+        }
+        .search {
+            padding:3px 8px 3px !important;
+        }
+        input[type=search] {
+            padding: 10px 0px 10px;
+            border: 0px solid #fff;
+            background: #eee;
+            -webkit-appearance: none;
+            width:90%;
+            float:none;
+        }
+        input[type=search]:focus {
+            outline:none;
+        }
+        .type{
+            height: 47px;;
+        }
+        .date{
+            background-color:#f7f7f7
+        }
+        .docdate {
+            vertical-align:bottom !important;
+        }
+        .distr {
+            margin: 0 0 5px;
+            font-size: 12px;
+        }
+        .ndoc {
+            margin: 0 0 5px;
+        }
+        .storage {
+            margin: 0;
+            color: #aaa !important;
+            font-size: 12px;
+        }
+
+
+
+
+
+        td, th {
+            vertical-align: middle !important;
+        }
+        .left, .right {
+            float:left;
+            height:100vh;
+        }
+
+        .left {
+            background: #037bb5;
+            display: inline-block;
+            white-space: nowrap;
+            width: 50px;
+            transition: width 1s ;
+        }
+
+        .right {
+            background: #fff;
+            width: 350px;
+            transition: width 1s;
+            border-style:solid;
+            border-color:#ccc;
+            border-width:1px;
+        }
+
+        .left:hover {
+            width: 250px;
+        }
+
+        .item:hover {
+            background-color:#ccc;
+        }
+
+        .left .glyphicon {
+            margin:15px;
+            width:20px;
+            color:#fff;
+        }
+
+        .right .glyphicon {
+            color:#a9a9a9;
+        }
+        span.glyphicon.glyphicon-refresh{
+            font-size:17px;
+            vertical-align: middle !important;
+        }
+
+        .item {
+            height:50px;
+            overflow:hidden;
+            color:#fff;
+        }
+        .title {
+            background-color:#EEEEEE;
+            border-style:solid;
+            border-color:#ccc;
+            border-width:1px;
+            box-sizing: border-box;
+        }
+        .search:hover {
+            border-color:#4aa9fb;
+            border-width:1px;
+        }
+        .search {
+            padding:3px 8px 3px !important;
+        }
+        input[type=search] {
+            padding: 10px 0px 10px;
+            border: 0px solid #fff;
+            background: #eee;
+            -webkit-appearance: none;
+            width:90%;
+            float:none;
+        }
+        input[type=search]:focus {
+            outline:none;
+        }
+        .type{
+            height: 47px;;
+        }
+        .date{
+            background-color:#f7f7f7
+        }
+        .docdate {
+            vertical-align:bottom !important;
+        }
+        .distr {
+            margin: 0 0 5px;
+            font-size: 12px;
+        }
+        .ndoc {
+            margin: 0 0 5px;
+        }
+        .storage {
+            margin: 0;
+            color: #aaa !important;
+            font-size: 12px;
+        }
+        i.material-icons.list-icon {
+            margin-right: 20px;
+            margin-left: 5px;
+            margin-top: 15px;
+        }
+        h4.title {
+            background: transparent;
+            border: none;
+        }
+        .vcenter {
+            display: inline-block;
+            vertical-align: middle;
+            float: none;
+            margin-top: 50px;
+        }
+        .card-header {
+            background: #037BB5 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="sidebar-wrapper" class="sidebar-toggle">
+            <div class="left">
+                <div class="item text-center">
+                    <i class="material-icons list-icon">dashboard</i> DASHBOARD
+                </div>
+                <div class="item active">
+                    <i class="material-icons list-icon">list</i>
+                    Tests list</div>
+                <div class="item">
+                    <i class="material-icons list-icon">person_add</i>
+                    Register</div>
+                <div class="item">
+                    <i class="material-icons list-icon">input</i>
+                    Login</div>
+                <div class="item">
+                    <i class="material-icons list-icon">delete</i>
+                    Delete</div>
+            </div>
+            <div class="right">
+                <table class="table">
+                    <tr>
+                        <td class="title search col-md-9">
+                            <div class="inner-addon right-addon">
+                                <input class="col-md-12" type="search" placeholder="Search">
+                                <i style="font-size: large" class="material-icons">search</i>
+                            </div>
+                        </td>
+                        <th valign="middle" colspan="2" class="title text-center">
+                            <i class="material-icons">refresh</i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="type"><i style="margin-top: 5px;" class="material-icons">person</i> Curent user</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="date">Date </td>
+                    </tr>
+                    <tr>
+                        <td class="docs">
+                            <p class="ndoc">test Php 1</p>
+                            <p class="distr">description</p>
+                            <p class="storage">cscds</p>
+                        </td>
+                        <td class="docdate">31/12/2017, 9:56</td>
+                    </tr>
+                    <tr>
+                        <td class="docs">
+                            <p class="ndoc">Test Php 2</p>
+                            <p class="distr">Description</p>
+                            <p class="storage">Koksdod</p>
+                        </td>
+                        <td class="docdate">31/12/2017, 11:10</td>
+                    </tr>
+                    <tr>
+                        <td class="docs">
+                            <p class="ndoc">Test php 3</p>
+                            <p class="distr">description</p>
+                            <p class="storage">knoots</p>
+                        </td>
+                        <td class="docdate">01/02/2018, 14:16</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-1 vcenter">
+                <div class="card">
+                    <div class="card-header" data-background-color="blue">
+                        <h4 class="title">Github Scanner</h4>
+                    </div>
+                    <div class="card-content table-responsive">
+                        <p>
+                            <label htmlfor="github">Enter your Github link</label>
+                            <input type="text" id="github" name="github" title="github">
+                        </p>
+                        <p><input type="checkbox" class=""> Test 1</p>
+                        <p><input type="checkbox" class=""> Test 2</p>
+                        <p><input type="checkbox" class=""> Test 3</p>
+                        <p><input type="checkbox" class=""> Test 4</p>
+                        <p>
+                            <input type="submit" id="do_login" value="START ANALYSE" title="Get Started">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script
+            src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+<script>
+    $(window).resize(function() {
+        var path = $(this);
+        var contW = path.width();
+        if(contW >= 751){
+            document.getElementsByClassName("sidebar-toggle")[0].style.left="200px";
+        }else{
+            document.getElementsByClassName("sidebar-toggle")[0].style.left="-200px";
+        }
+    });
+    $(document).ready(function() {
+        $('.dropdown').on('show.bs.dropdown', function(e){
+            $(this).find('.dropdown-menu').first().stop(true, true).slideDown(300);
+        });
+        $('.dropdown').on('hide.bs.dropdown', function(e){
+            $(this).find('.dropdown-menu').first().stop(true, true).slideUp(300);
+        });
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            var elem = document.getElementById("sidebar-wrapper");
+            left = window.getComputedStyle(elem,null).getPropertyValue("left");
+            if(left == "200px"){
+                document.getElementsByClassName("sidebar-toggle")[0].style.left="-200px";
+            }
+            else if(left == "-200px"){
+                document.getElementsByClassName("sidebar-toggle")[0].style.left="200px";
+            }
+        });
+    });
+</script>
+</body>
+</html>
+
+
+
+<!--- {"test}
