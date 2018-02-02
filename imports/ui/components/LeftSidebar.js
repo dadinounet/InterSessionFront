@@ -6,10 +6,10 @@ class LeftSidebar extends Component {
     render() {
         return (
             <div className="left">
-                <LeftSideItem icon="dashboard" label="DASHBOARD" />
-                <LeftSideItem icon="list" label="Tests list" />
-                {this.isLogged ? '' : <LeftSideItem icon="person_add" label="Register" /> }
-                {this.isLogged ? '<LeftSideItem icon="output" label="Logout" />' : <LeftSideItem icon="input" label="Login" /> }
+                <LeftSideItem icon="dashboard" label="DASHBOARD" class="item text-center"/>
+                <LeftSideItem icon="list" label="Tests list" class="item active"/>
+                {this.isLogged ? '' : <LeftSideItem icon="person_add" label="Register" class="item"/>}
+                {this.isLogged ? '<LeftSideItem icon="output" label="Logout" class="item" />' : <LeftSideItem icon="input" label="Login" class={"item"}/>}
                 { /*this.isLogged ? '' : <LeftSideItem icon="delete" label="Delete" /> */ }
             </div>
         );

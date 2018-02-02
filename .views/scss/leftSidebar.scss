@@ -1,0 +1,30 @@
+.left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #037bb5;
+  display: inline-block;
+  white-space: nowrap;
+  width: 50px;
+  transition: width 1s;
+  float: left;
+  height: 100vh;
+  &:hover {
+    width: 250px;
+  }
+}
+
+.item {
+  height: 50px;
+  overflow: hidden;
+  color: #fff;
+  &:hover {
+    background-color: #ccc;
+  }
+
+  i.material-icons.list-icon {
+    margin-right: 20px;
+    margin-left: 5px;
+    margin-top: 15px;
+  }
+}
