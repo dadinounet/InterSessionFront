@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Route} from 'react-router-dom';
 import Login from './Login';
 import Register from './Register';
+import Password from './Password';
 
 class Forms extends Component {
 
@@ -26,6 +27,7 @@ class Forms extends Component {
             <div id="securityScanner_forms">
                 <Route path="/login" render={()=><Login showLoginInfo={this.showLoginInfo} hideLoginInfo={this.hideLoginInfo} />} />
                 <Route path="/register" render={()=><Register showLoginInfo={this.showLoginInfo} hideLoginInfo={this.hideLoginInfo} />} />
+                <Route path="/password" render={() => <Password showLoginInfo={this.showLoginInfo} hideLoginInfo={this.hideLoginInfo}/>}/>
             </div>
         );
     }

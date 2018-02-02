@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Checkbox from './components/Checkbox';
+import {Link} from 'react-router-dom';
 
 class Login extends Component {
 
@@ -27,26 +27,31 @@ class Login extends Component {
                 <div className='box'>
                     <div className='box-form'>
                         <div className='box-login-title'>
-                            <div className='i i-login'></div><h2>LOGIN</h2>
+                            <div className='i i-login'/>
+                            <h2>LOGIN</h2>
                         </div>
                         <div className='box-login'>
                             <div className='fieldset-body' id='login_form'>
-                                <button onClick={this.showLoginInfo} className='b b-form i i-more' title='More informations'></button>
+                                <button onClick={this.props.showLoginInfo} className='b b-form i i-more' title='More informations'/>
                                 <p className='field'>
                                     <label htmlFor={'user'}>EMAIL</label>
                                     <input type='text' id='user' name='user' title='Username' />
-                                    <span id='valida' className='i i-warning'></span>
+                                    <span id='valida' className='i i-warning'/>
                                 </p>
-                                <input type='submit' id='do_login' value='RETRIEVE MY PASSWORD' title='Get Started' />
+                                <p><input type='submit' id='do_login' value='RETRIEVE MY PASSWORD' title='Get Started'/></p>
                             </div>
                         </div>
                     </div>
                     <div className='box-info'>
-                        <p><button onClick={this.hideLoginInfo} className='b b-info i i-left' title='Back to Sign In'></button><span>Need Help?</span>
+                        <p>
+                            <button onClick={this.props.hideLoginInfo} className='b b-info i i-left' title='Back to Sign In'/>
+                            <span>Need Help?</span>
                         </p>
-                        <div className='line-wh'></div>
-                        <button className='b-support btn btn-default' title='Contact Support'> Contact Support</button>
-                        <div className='line-wh'></div>
+                        <div className='line-wh'/>
+                        <Link to={`/register`}>
+                            <button className='b-support btn btn-defaut' title='Create account'>Create account</button>
+                        </Link>
+                        <div className='line-wh'/>
                     </div>
                 </div>
             </div>

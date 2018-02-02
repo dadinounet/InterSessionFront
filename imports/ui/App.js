@@ -9,6 +9,8 @@ const PrimaryLayout = () => (
         <main>
             <Route path="/" exact component={LeftSidebar} />
             <Route path="/login" component={Forms} />
+            <Route path="/register" component={Forms}/>
+            <Route path="/password" component={Forms}/>
         </main>
     </div>
 );
