@@ -2,12 +2,10 @@ import React from 'react';
 import {render} from "react-dom";
 import {BrowserRouter, Route} from 'react-router-dom';
 import Forms from './Forms';
-import LeftSidebar from "./components/LeftSidebar";
-import RightSidebar from "./components/RightSidebar";
 import Sidebar from "./components/Sidebar";
 
 const PrimaryLayout = () => (
-    <div className="container">
+    <div className="container-fluid">
         <main>
             <Route path="/" exact component={Sidebar} />
             <Route path="/login" component={Forms} />

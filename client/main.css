@@ -6777,9 +6777,6 @@ html, body {
       cursor: pointer; }
 
 .left {
-  position: fixed;
-  top: 0;
-  left: 0;
   background: #037bb5;
   display: inline-block;
   white-space: nowrap;
