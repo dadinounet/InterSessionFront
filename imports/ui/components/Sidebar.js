@@ -3,7 +3,7 @@ import LeftSidebar from "./LeftSidebar";
 import RightSidebar from "./RightSidebar";
 
 class Sidebar extends Component {
-
+    isLogged = true;
     constructor(props) {
         super(props);
     }
@@ -12,7 +12,7 @@ class Sidebar extends Component {
         return (
             <div className="row">
                 <LeftSidebar/>
-                <RightSidebar/>
+                {this.isLogged ? <RightSidebar/> : ''}
             </div>
         )
     }

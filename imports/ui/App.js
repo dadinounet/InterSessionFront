@@ -1,16 +1,12 @@
 import React from 'react';
 import {render} from "react-dom";
 import {BrowserRouter, Route} from 'react-router-dom';
-import Forms from './Forms';
-import Sidebar from "./components/Sidebar";
+import Home from "./Home";
 
 const PrimaryLayout = () => (
     <div className="container-fluid">
         <main>
-            <Route path="/" exact component={Sidebar} />
-            <Route path="/login" component={Forms} />
-            <Route path="/register" component={Forms}/>
-            <Route path="/password" component={Forms}/>
+            <Route path="/" component={Home}/>
         </main>
     </div>
 );
