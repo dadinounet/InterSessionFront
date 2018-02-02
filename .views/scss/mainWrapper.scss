@@ -1,0 +1,7 @@
+@import "function";
+
+.card {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  @include boxShadow(0 3px 6px rgba(0, 0, 0, 0.19))
+}

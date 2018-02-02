@@ -6796,7 +6796,8 @@ html, body {
 .item {
   height: 50px;
   overflow: hidden;
-  color: #fff; }
+  color: #fff;
+  margin-left: 5px; }
   .item:hover {
     background-color: #ccc; }
   .item i.material-icons.list-icon {
@@ -6845,5 +6846,14 @@ html, body {
     font-size: 12px; }
   .right table .docdate {
     vertical-align: bottom !important; }
+
+.card {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19);
+  -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19);
+  -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19); }
 
 /*# sourceMappingURL=main.css.map */
