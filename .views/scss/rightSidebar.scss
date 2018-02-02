@@ -1,0 +1,57 @@
+.right {
+  color:#a9a9a9;
+  float:left !important;
+  height:100vh;
+  background: #fff;
+  width: 350px;
+  transition: width 1s;
+  border-style:solid;
+  border-color:#ccc;
+  border-width:1px;
+
+  table {
+    td, th {
+      vertical-align: middle !important;
+    }
+    input[type=search] {
+      padding: 10px 0px 10px;
+      border: 0px solid #fff;
+      background: #eee;
+      -webkit-appearance: none;
+      width:90%;
+    }
+    input[type=search]:focus {
+      outline:none;
+    }
+    .date{
+      background-color:#f7f7f7
+    }
+    .search {
+      padding:3px 8px 3px !important;
+    }
+    .title {
+      background-color:#EEEEEE;
+      border-style:solid;
+      border-color:#ccc;
+      border-width:1px;
+      box-sizing: border-box;
+    }
+    .docs {
+      .distr {
+        margin: 0 0 5px;
+        font-size: 12px;
+      }
+      .ndoc {
+        margin: 0 0 5px;
+      }
+      .storage {
+        margin: 0;
+        color: #aaa !important;
+        font-size: 12px;
+      }
+    }
+    .docdate {
+      vertical-align:bottom !important;
+    }
+  }
+}
