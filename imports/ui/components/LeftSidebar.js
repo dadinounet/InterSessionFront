@@ -5,7 +5,7 @@ class LeftSidebar extends Component {
     isLogged = false;
     render() {
         return (
-            <div className="left">
+            <div className="left card">
                 <LeftSideItem icon="dashboard" label="DASHBOARD" class="item text-center item-no-hover"/>
                 <LeftSideItem icon="list" label="Tests list" class="item active"/>
                 {this.isLogged ? '' : <LeftSideItem icon="person_add" label="Register" class="item"/>}
