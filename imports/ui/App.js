@@ -1,19 +1,17 @@
 import React from 'react';
 import {render} from "react-dom";
 import {BrowserRouter, Route} from 'react-router-dom';
-import Home from "./Home";
-
-const PrimaryLayout = () => (
-    <div className="container-fluid">
-        <main>
-            <Route path="/" component={Home}/>
-        </main>
-    </div>
-);
+import Forms from "./Forms";
+import Sidebar from "./components/Sidebar";
 
 const App = () => (
     <BrowserRouter>
-        <PrimaryLayout/>
+        <main className="container-fluid">
+            <Sidebar/>
+            <Route path="/login" component={Forms}/>
+            <Route path="/register" component={Forms}/>
+            <Route path="/password" component={Forms}/>
+        </main>
     </BrowserRouter>
 );
 
