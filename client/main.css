@@ -6497,6 +6497,10 @@ a.text-dark:hover, a.text-dark:focus {
 a {
   text-decoration: none; }
 
+a:hover {
+    text-decoration: none;
+}
+
 button:focus {
   outline: 0; }
 
