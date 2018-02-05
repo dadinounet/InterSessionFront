@@ -1,4 +1,4 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 
-import '../imports/ui/App';
+import '../imports/App';
