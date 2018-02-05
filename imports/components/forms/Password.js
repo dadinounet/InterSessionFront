@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 class Login extends Component {
@@ -12,15 +12,17 @@ class Login extends Component {
     }
 
     showLoginInfo() {
-        $('.b-form').css("opacity","0.01");
-        $('.box-form').css("left","-37%");
-        $('.box-info').css("right","-37%");
+        $('.b-form').css("opacity", "0.01");
+        $('.box-form').css("left", "-37%");
+        $('.box-info').css("right", "-37%");
     }
+
     hideLoginInfo() {
-        $('.b-form').css("opacity","1");
-        $('.box-form').css("left","0px");
-        $('.box-info').css("right","-5px");
+        $('.b-form').css("opacity", "1");
+        $('.box-form').css("left", "0px");
+        $('.box-info').css("right", "-5px");
     }
+
     render() {
         return (
             <div>
@@ -35,7 +37,7 @@ class Login extends Component {
                                 <button onClick={this.props.showLoginInfo} className='b b-form i i-more' title='More informations'/>
                                 <p className='field'>
                                     <label htmlFor={'user'}>EMAIL</label>
-                                    <input type='text' id='user' name='user' title='Username' />
+                                    <input type='text' id='user' name='user' title='Username'/>
                                     <span id='valida' className='i i-warning'/>
                                 </p>
                                 <p><input type='submit' id='do_login' value='RETRIEVE MY PASSWORD' title='Get Started'/></p>
@@ -61,34 +63,33 @@ class Login extends Component {
 
 export default Login;
 
-$(document).ready(function() {
-    $("#do_login").click(function() {
+$(document).ready(function () {
+    $("#do_login").click(function () {
         closeLoginInfo();
-        $(this).parent().find('span').css("display","none");
+        $(this).parent().find('span').css("display", "none");
         $(this).parent().find('span').removeClass("i-save");
         $(this).parent().find('span').removeClass("i-warning");
         $(this).parent().find('span').removeClass("i-close");
 
         var proceed = true;
-        $("#login_form input").each(function(){
+        $("#login_form input").each(function () {
 
-            if(!$.trim($(this).val())){
+            if (!$.trim($(this).val())) {
                 $(this).parent().find('span').addClass("i-warning");
-                $(this).parent().find('span').css("display","block");
+                $(this).parent().find('span').css("display", "block");
                 proceed = false;
             }
         });
 
-        if(proceed)
-        {
+        if (proceed) {
             $(this).parent().find('span').addClass("i-save");
-            $(this).parent().find('span').css("display","block");
+            $(this).parent().find('span').css("display", "block");
         }
     });
 
     //reset previously results and hide all message on .keyup()
-    $("#login_form input").keyup(function() {
-        $(this).parent().find('span').css("display","none");
+    $("#login_form input").keyup(function () {
+        $(this).parent().find('span').css("display", "none");
     });
 
     setTimeout(closeLoginInfo, 1000);
@@ -96,13 +97,13 @@ $(document).ready(function() {
 
 
 function closeLoginInfo() {
-    $(document).ready(function(){
-        $('.b-form').css("opacity","1");
-        $('.box-form').css("left","0px");
-        $('.box-info').css("right","-5px");
+    $(document).ready(function () {
+        $('.b-form').css("opacity", "1");
+        $('.box-form').css("left", "0px");
+        $('.box-info').css("right", "-5px");
     });
 }
 
-$(window).on('resize', function(){
+$(window).on('resize', function () {
     closeLoginInfo();
 });

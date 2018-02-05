@@ -1,8 +1,9 @@
 import React from 'react';
 import {render} from "react-dom";
 import {BrowserRouter, Route} from 'react-router-dom';
-import Forms from "./Forms";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/sidebar/Sidebar";
+import Forms from "./components/forms/Forms";
+import MainWrapper from "./components/content/MainWrapper";
 
 const App = () => (
     <BrowserRouter>
@@ -11,6 +12,7 @@ const App = () => (
             <Route path="/login" component={Forms}/>
             <Route path="/register" component={Forms}/>
             <Route path="/password" component={Forms}/>
+            <MainWrapper/>
         </main>
     </BrowserRouter>
 );

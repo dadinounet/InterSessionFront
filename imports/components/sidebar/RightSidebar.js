@@ -25,7 +25,7 @@ class RightSidebar extends Component {
                     <tr>
                         <td className="title search col-md-9">
                             <div className="inner-addon right-addon">
-                                <input className="col-md-12" type="search" placeholder="Search"></input>
+                                <input className="col-md-12" type="search" placeholder="Search"/>
                                 <i className="material-icons">search</i>
                             </div>
                         </td>
@@ -34,13 +34,13 @@ class RightSidebar extends Component {
                         </th>
                     </tr>
                     <tr>
-                        <td colSpan="2" className="type"><i className="material-icons">person</i> Curent user</td>
+                        <td colSpan="2" className="type"><i className="material-icons">person</i> Current user</td>
                     </tr>
                     <tr>
                         <td colSpan="2" className="date">Date</td>
                     </tr>
                     {previousTest.map((item, index) => {
-                        return <HistoriqueItem key={index} test={item}></HistoriqueItem>;
+                        return <HistoriqueItem key={index} test={item}/>;
                     })}
                     </tbody>
                 </table>
