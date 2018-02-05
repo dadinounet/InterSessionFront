@@ -9,6 +9,7 @@ class Register extends Component {
 
     render() {
         return (
+            <div className="col-sm-6 offset-sm-1 vcenter">
             <div className='box'>
                 <div className='box-form'>
                     <div className='box-login-title'>
@@ -50,6 +51,7 @@ class Register extends Component {
                     </Link>
                     <div className='line-wh'/>
                 </div>
+            </div>
             </div>
         );
     }

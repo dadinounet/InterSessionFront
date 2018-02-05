@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LeftSidebar from "./LeftSidebar";
 import RightSidebar from "./RightSidebar";
+import Navbar from "./Navbar";
 
 class Sidebar extends Component {
     isLogged = true;
@@ -10,7 +11,7 @@ class Sidebar extends Component {
 
     render() {
         return (
-            <div className="row">
+            <div id="sidebar">
                 <LeftSidebar/>
                 {this.isLogged ? <RightSidebar/> : ''}
             </div>

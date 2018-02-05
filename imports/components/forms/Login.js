@@ -20,7 +20,7 @@ class Login extends Component {
 
     render() {
         return (
-            <div className='box'>
+            <div className='box col-sm-offset-1'>
                 <div className='box-form'>
                     <div className='box-login'>
                         <div className='fieldset-body' id='login_form'>

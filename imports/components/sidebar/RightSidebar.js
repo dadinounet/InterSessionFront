@@ -19,7 +19,7 @@ class RightSidebar extends Component {
         }, {"title": "test Php 1", "desc": "super test pour votre code php", 'testDate': "2018-12-05"}];
 
         return (
-            <div className="right">
+            <div id="rightSidebar" className="right">
                 <table className="table">
                     <tbody>
                     <tr>

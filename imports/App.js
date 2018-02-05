@@ -1,18 +1,22 @@
 import React from 'react';
 import {render} from "react-dom";
 import {BrowserRouter, Route} from 'react-router-dom';
-import Sidebar from "./components/sidebar/Sidebar";
 import Forms from "./components/forms/Forms";
-import MainWrapper from "./components/content/MainWrapper";
+import TestConfig from "./components/forms/TestConfig";
+import Sidebar from "./components/sidebar/Sidebar";
+import Navbar from "./components/sidebar/Navbar";
 
 const App = () => (
     <BrowserRouter>
         <main className="container-fluid">
-            <Sidebar/>
-            <Route path="/login" component={Forms}/>
-            <Route path="/register" component={Forms}/>
-            <Route path="/password" component={Forms}/>
-            <MainWrapper/>
+            <Navbar></Navbar>
+            <div id="main-wrapper" className="row">
+                <Sidebar/>
+                <Route path="/login" component={Forms}/>
+                <Route path="/register" component={Forms}/>
+                <Route path="/password" component={Forms}/>
+                <Route path="/test" component={TestConfig}/>
+            </div>
         </main>
     </BrowserRouter>
 );
