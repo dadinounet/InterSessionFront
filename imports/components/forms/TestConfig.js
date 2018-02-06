@@ -8,7 +8,7 @@ class TestConfig extends Component {
 
     render() {
         return (
-                <div className="col-sm-6 offset-sm-1 vcenter">
+                <div className="col-sm-8 offset-sm-2 align-self-center vcenter">
                     <div className="card">
                         <div className="card-header" data-background-color="blue">
                             <h4 className="title">Github Scanner</h4>

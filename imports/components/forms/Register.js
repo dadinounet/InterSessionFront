@@ -9,16 +9,14 @@ class Register extends Component {
 
     render() {
         return (
-            <div className="col-sm-6 offset-sm-1 vcenter">
+            <div className="col-sm-4 offset-md-4 vcenter">
             <div className='box'>
                 <div className='box-form'>
                     <div className='box-login-title'>
-                        <div className='i i-login'/>
-                        <h2>LOGIN</h2>
                     </div>
                     <div className='box-login'>
                         <div className='fieldset-body' id='login_form'>
-                            <button onClick={this.props.showLoginInfo} className='b b-form i i-more'/>
+                            <br/>
                             <p className='field'>
                                 <label htmlFor="user">EMAIL</label>
                                 <input type='text' id='email' name='email'/>
@@ -39,17 +37,6 @@ class Register extends Component {
                             </p>
                         </div>
                     </div>
-                </div>
-                <div className='box-info'>
-                    <p>
-                        <button onClick={this.props.hideLoginInfo} className='b b-info i i-left' title='Back to Register'/>
-                        <span>Need Help?</span>
-                    </p>
-                    <div className='line-wh'/>
-                    <Link to={`/login`}>
-                        <button className='b-support btn btn-defaut' title='Already registered ?'>Already registered ?</button>
-                    </Link>
-                    <div className='line-wh'/>
                 </div>
             </div>
             </div>

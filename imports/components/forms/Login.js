@@ -20,12 +20,12 @@ class Login extends Component {
 
     render() {
         return (
-            <div className='box col-sm-offset-1'>
+            <div className='box col-sm-4 offset-sm-4 vcenter'>
                 <div className='box-form'>
                     <div className='box-login'>
                         <div className='fieldset-body' id='login_form'>
                             <form onSubmit={this.handleSubmit}>
-                                <button onClick={this.props.showLoginInfo} className='b b-form i i-more' title='More informations'/>
+                                <br/>
                                 <p className='field'>
                                     <label htmlFor="user">EMAIL</label>
                                     <input type='text' id='email' name='email' value={this.state.email} onChange={(event) => {
@@ -49,21 +49,6 @@ class Login extends Component {
                             </form>
                         </div>
                     </div>
-                </div>
-                <div className='box-info'>
-                    <p>
-                        <button onClick={this.props.hideLoginInfo} className='b b-info i i-left' title='Back to Sign In'/>
-                        <span>Need Help?</span>
-                    </p>
-                    <div className='line-wh'/>
-                    <Link to={`/password`}>
-                        <button className='b-support btn btn-defaut' title='Forgot Password?'>Forgot Password ?</button>
-                    </Link>
-                    <Link to={`/register`}>
-                        <button className='b-support btn btn-defaut' title='Create account'>Create account</button>
-                    </Link>
-                    <div className='line-wh'/>
-                    {/*<button className='b-cta' title='Sign up now!'>CREATE ACCOUNT</button>*/}
                 </div>
             </div>
         );
