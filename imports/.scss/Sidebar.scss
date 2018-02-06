@@ -1,0 +1,39 @@
+#navbar {
+  display: none;
+  background: #EEEEEE;
+  @include boxShadow(0 10px 20px rgba(0,0,0,0.19));
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin-bottom: 80px;
+  header {
+    .btn-hamburger {
+      text-decoration: none;
+      background: transparent;
+      border: none;
+    }
+    .item.nav-item {
+      color: #037bb5;
+      i {
+        vertical-align: sub;
+      }
+    }
+    .navbar-header {
+
+      .navbar-toggle i {
+        vertical-align: sub;
+      }
+
+      .navbar-brand {
+        color: #037BB5 !important;
+        margin-left: 16px;
+        i.material-icons {
+          vertical-align: sub;
+        }
+      }
+    }
+  }
+}
+

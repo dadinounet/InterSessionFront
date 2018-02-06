@@ -1,0 +1,244 @@
+
+.title {
+  background-color:#EEEEEE;
+  border-style:solid;
+  border-color:#ccc;
+  border-width:1px;
+  box-sizing: border-box;
+}
+
+input[type=search] {
+  padding: 10px 0px 10px;
+  border: 0px solid #fff;
+  background: #eee;
+  -webkit-appearance: none;
+  width:90%;
+  float:none;
+}
+input[type=search]:focus {
+  outline:none;
+}
+
+h4.title {
+  background: transparent;
+  border: none;
+}
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+
+  .card {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: 25px 0;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    border-radius: 3px;
+    color: rgba(0, 0, 0, 0.87);
+    background: #fff;
+  }
+
+  .card .card-height-indicator {
+    margin-top: 100%;
+  }
+
+  .card.row-space .header {
+    padding: 15px 20px 0;
+  }
+
+  .card .title {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .card .card-image {
+    height: 60%;
+    position: relative;
+    overflow: hidden;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -30px;
+    border-radius: 6px;
+  }
+
+  .card .card-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    pointer-events: none;
+  }
+
+  .card .card-image .card-title {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: #fff;
+    font-size: 1.3em;
+    text-shadow: 0 2px 5px rgba(33, 33, 33, 0.5);
+  }
+
+  .card .category:not([class*="text-"]) {
+    color: #999999;
+  }
+
+  .card .card-content {
+    padding: 15px 20px;
+  }
+
+  .card .card-content .category {
+    margin-bottom: 0;
+  }
+
+  .card .card-header {
+    box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    margin: -20px 15px 0;
+    border-radius: 3px;
+    padding: 15px;
+    background-color: #999999;
+  }
+
+  .card .card-header .title {
+    color: #FFFFFF;
+  }
+
+  .card .card-header .category {
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.62);
+  }
+
+  .card .card-header.card-chart {
+    padding: 0;
+    min-height: 160px;
+  }
+
+  .card .card-header.card-chart+.content h4 {
+    margin-top: 0;
+  }
+
+  .card .card-header .ct-label {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .card .card-header .ct-grid {
+    stroke: rgba(255, 255, 255, 0.2);
+  }
+
+  .card .card-header .ct-series-a .ct-point,
+  .card .card-header .ct-series-a .ct-line,
+  .card .card-header .ct-series-a .ct-bar,
+  .card .card-header .ct-series-a .ct-slice-donut {
+    stroke: rgba(255, 255, 255, 0.8);
+  }
+
+  .card .card-header .ct-series-a .ct-slice-pie,
+  .card .card-header .ct-series-a .ct-area {
+    fill: rgba(255, 255, 255, 0.4);
+  }
+
+  .card .chart-title {
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .card .chart-title h3 {
+    margin: 0;
+    color: #FFFFFF;
+  }
+
+  .card .chart-title h6 {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .card .card-footer {
+    margin: 0 20px 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eeeeee;
+  }
+
+  .card .card-footer .content {
+    display: block;
+  }
+
+  .card .card-footer div {
+    display: inline-block;
+  }
+
+  .card .card-footer .author {
+    color: #999999;
+  }
+
+  .card .card-footer .stats {
+    line-height: 22px;
+    color: #999999;
+    font-size: 12px;
+  }
+
+  .card .card-footer .stats .material-icons {
+    position: relative;
+    top: 4px;
+    font-size: 16px;
+  }
+
+  .card .card-footer h6 {
+    color: #999999;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card .category .material-icons {
+    position: relative;
+    top: 6px;
+    line-height: 0;
+  }
+
+  .card .category-social .fa {
+    font-size: 24px;
+    position: relative;
+    margin-top: -4px;
+    top: 2px;
+    margin-right: 5px;
+  }
+
+  .card .author .avatar {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+
+  .card .author a {
+    color: #3C4858;
+    text-decoration: none;
+  }
+
+  .card .author a .ripple-container {
+    display: none;
+  }
+
+  .card .table {
+    margin-bottom: 0;
+  }
+
+  .card .table tr:first-child td {
+    border-top: none;
+  }
+  .table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+.card-header {
+  background: #037BB5 !important;
+}
