@@ -10,8 +10,9 @@ const App = () => (
     <BrowserRouter>
         <main className="container-fluid">
             <Navbar></Navbar>
+            <Sidebar/>
+            <div className="row"></div>
             <div id="main-wrapper" className="row">
-                <Sidebar/>
                 <Route path="/login" component={Forms}/>
                 <Route path="/register" component={Forms}/>
                 <Route path="/password" component={Forms}/>
