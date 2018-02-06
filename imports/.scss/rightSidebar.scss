@@ -5,23 +5,34 @@
   background: #fff;
   width: 350px;
   transition: width 1s;
-  border-style:solid;
-  border-color:#ccc;
-  border-width:1px;
 
   table {
+    color: #616161;
+
+    .input-field {
+      input[type=search] {
+        background: transparent;
+        text-align: center;
+      }
+    }
+
+    i.material-icons {
+      vertical-align: sub;
+    }
     td, th {
       vertical-align: middle !important;
+
     }
     input[type=search] {
       padding: 10px 0px 10px;
-      border: 0px solid #fff;
-      background: #eee;
       -webkit-appearance: none;
       width:90%;
     }
     input[type=search]:focus {
       outline:none;
+    }
+    td.type {
+      text-align: center;
     }
     .date{
       background-color:#f7f7f7
@@ -30,10 +41,8 @@
       padding:3px 8px 3px !important;
     }
     .title {
-      background-color:#EEEEEE;
-      border-style:solid;
-      border-color:#ccc;
-      border-width:1px;
+      background-color:#0288D1;
+
       box-sizing: border-box;
     }
     .docs {
