@@ -15,10 +15,10 @@ class TestConfig extends Component {
                         </div>
                         <div className="card-content table-responsive">
                             <div className="form-group">
-                                <input type="email" className="form-control" id="exampleInputEmail1" required />
+                                <input type="email" className="form-control" id="github-link" required />
                                     <span className="form-highlight"></span>
                                     <span className="form-bar"></span>
-                                    <label className="float-label" htmlFor="exampleInputEmail1">Enter your Github link</label>
+                                    <label className="float-label" htmlFor="github-link">Enter your Github link</label>
                             </div>
                             <p><input type="checkbox" className="checkbox"/> Test 1</p>
                             <p><input type="checkbox" className="checkbox"/> Test 2</p>

@@ -16,7 +16,7 @@ const App = () => (
                 <Route path="/login" component={Forms}/>
                 <Route path="/register" component={Forms}/>
                 <Route path="/password" component={Forms}/>
-                <Route path="/test" component={TestConfig}/>
+                <Route path="/scanner" component={TestConfig}/>
             </div>
         </main>
     </BrowserRouter>
