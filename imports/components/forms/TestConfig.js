@@ -14,16 +14,18 @@ class TestConfig extends Component {
                             <h4 className="title">Github Scanner</h4>
                         </div>
                         <div className="card-content table-responsive">
-                            <p>
-                                <label htmlFor="github">Enter your Github link</label>
-                                <input type="text" id="github" name="github" title="github" />
-                            </p>
+                            <div className="form-group">
+                                <input type="email" className="form-control" id="exampleInputEmail1" required />
+                                    <span className="form-highlight"></span>
+                                    <span className="form-bar"></span>
+                                    <label className="float-label" htmlFor="exampleInputEmail1">Enter your Github link</label>
+                            </div>
                             <p><input type="checkbox" className="checkbox"/> Test 1</p>
                             <p><input type="checkbox" className="checkbox"/> Test 2</p>
                             <p><input type="checkbox" className="checkbox"/> Test 3</p>
                             <p><input type="checkbox" className="checkbox"/> Test 4</p>
-                            <p>
-                                <input type="submit" id="do_login" value="START ANALYSIS" title="Get Started" />
+                            <p className="text-center">
+                                <input className="btn btn-primary" type="submit" id="do_login" value="START ANALYSIS" title="Get Started" />
                             </p>
                         </div>
                     </div>
