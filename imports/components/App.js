@@ -35,7 +35,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         userLogin: (user) => {
-            dispatch({type: 'REQUEST_USER_LOGIN', data: user});
+            dispatch({type: 'HTTP_REQUEST_USER_LOGIN', data: user});
         }
     }
 };
