@@ -8,7 +8,7 @@ class Login extends Component {
         password: '',
         rememberMe: true,
         loginError: null,
-        isConnected: false
+        isConnected: true
     };
 
     handleSubmit = (event) => {
@@ -22,7 +22,7 @@ class Login extends Component {
 
     render() {
         if (this.state.isConnected === true) {
-              return <Redirect to='/'/>
+              return <Redirect to='/scanner'/>
         }
         return (
             <div id="login-container" className={`box col-sm-4 vcenter ${this.state.isConnected ? 'offset-sm-4' : 'offset-sm-9'}`}>

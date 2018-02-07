@@ -8,14 +8,30 @@ import Navbar from "./sidebar/Navbar";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
     <Route {...rest} render={(props) => (
-        window.globalState.user.isConnected === true
+        Auth.user.isAuthenticated === true
             ? <Component {...props} />
             : <Redirect to={{
                 pathname: '/login',
                 state: { from: props.location }
             }} />
     )} />
-)
+);
+
+const Auth = {
+    user: {
+        isAuthenticated: false,
+        token: null,
+        email: null,
+        history: []
+    },
+    authenticate() {
+        this.user.isAuthenticated = true
+        //todo check for a the real json
+    },
+    signout() {
+        this.user.isAuthenticated = false
+    }
+}
 
 class App extends React.Component {
 
@@ -33,7 +49,6 @@ class App extends React.Component {
                     <Sidebar/>
                     <div className="row"/>
                     <div id="main-wrapper" className="row">
-                        {this.state.user.isConnected === true }
                         <Route path="/login" render={() => <Forms userLogin={this.props.userLogin}/>}/>
                         <Route path="/register" component={Forms}/>
                         <Route path="/password" component={Forms}/>
