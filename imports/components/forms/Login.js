@@ -49,7 +49,7 @@ class Login extends Component {
                                 </p>
                                 <input type="checkbox" name="rememberMe" className="checkbox" onChange={(event) => {
                                     this.setState({rememberMe: !!event.target.checked})
-                                }}/> Remember me
+                                }} checked={this.state.rememberMe ? "checked" : ""}/> Remember me
                                 <p>
                                     <input type='submit' id='do_login' value='GET STARTED'/>
                                 </p>
