@@ -5,6 +5,7 @@
   background: #fff;
   width: 350px;
   transition: width 1s;
+    @include boxShadow( 0 3px 6px rgba(0,0,0,0.23));
 
   table {
     color: #616161;

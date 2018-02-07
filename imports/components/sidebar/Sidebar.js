@@ -4,7 +4,7 @@ import RightSidebar from "./RightSidebar";
 import Navbar from "./Navbar";
 
 class Sidebar extends Component {
-    isLogged = false;
+    isLogged = true;
     constructor(props) {
         super(props);
     }
