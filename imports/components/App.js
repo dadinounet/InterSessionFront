@@ -50,9 +50,9 @@ class App extends React.Component {
                     <div className="row"/>
                     <div id="main-wrapper" className="row">
                         <Route path="/login" render={() => <Forms userLogin={this.props.userLogin}/>}/>
-                        <Route path="/register" component={Forms}/>
+                        <Route path="/register" render={() => <Forms userRegister={this.props.userRegister}/>}/>
                         <Route path="/password" component={Forms}/>
-                        <Route path="/scanner" component={TestConfig}/>
+                        <Route path="/scanner" render={() => <TestConfig submitGithubLink={this.props.submitGithubLink}/>}/>
                     </div>
                 </main>
             </BrowserRouter>);
@@ -69,6 +69,12 @@ const mapDispatchToProps = (dispatch) => {
     return {
         userLogin: (user) => {
             dispatch({type: 'HTTP_REQUEST_USER_LOGIN', data: user});
+        },
+        userRegister: (user) => {
+            dispatch({type: 'HTTP_REQUEST_USER_REGISTER', data: user});
+        },
+        submitGithubLink: (github) => {
+            dispatch({type: 'HTTP_REQUEST_GITHUB', data: github});
         }
     }
 };

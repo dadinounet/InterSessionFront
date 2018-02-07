@@ -26,7 +26,7 @@ class Forms extends Component {
         return (
             <div className="row align-self-center" id="securityScanner_forms">
                 <Route path="/login" render={() => <Login showLoginInfo={this.showLoginInfo} hideLoginInfo={this.hideLoginInfo} userLogin={this.props.userLogin}/>}/>
-                <Route path="/register" render={() => <Register showLoginInfo={this.showLoginInfo} hideLoginInfo={this.hideLoginInfo}/>}/>
+                <Route path="/register" render={() => <Register showLoginInfo={this.showLoginInfo} hideLoginInfo={this.hideLoginInfo} userRegister={this.props.userRegister}/>}/>
                 <Route path="/password" render={() => <Password showLoginInfo={this.showLoginInfo} hideLoginInfo={this.hideLoginInfo}/>}/>
             </div>
         );
