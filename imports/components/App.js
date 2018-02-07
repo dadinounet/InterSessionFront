@@ -19,7 +19,7 @@ class App extends React.Component {
                         <Route path="/login" render={() => <Forms userLogin={this.props.userLogin}/>}/>
                         <Route path="/register" render={() => <Forms userRegister={this.props.userRegister}/>}/>
                         <Route path="/password" component={Forms}/>
-                        <Route path="/scanner" component={TestConfig}/>
+                        <Route path="/scanner" render={() => <TestConfig submitGithubLink={this.props.submitGithubLink}/>}/>
                     </div>
                 </main>
             </BrowserRouter>);
@@ -39,6 +39,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         userRegister: (user) => {
             dispatch({type: 'HTTP_REQUEST_USER_REGISTER', data: user});
+        },
+        submitGithubLink: (github) => {
+            dispatch({type: 'HTTP_REQUEST_GITHUB', data: github});
         }
     }
 };
