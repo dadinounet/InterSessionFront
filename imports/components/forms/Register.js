@@ -9,7 +9,7 @@ class Register extends Component {
 
     render() {
         return (
-            <div className="col-sm-4 offset-md-4 vcenter">
+            <div id="register-box" className="col-sm-4 offset-md-9 vcenter">
             <div className='box'>
                 <div className='box-form'>
                     <div className='box-login-title'>

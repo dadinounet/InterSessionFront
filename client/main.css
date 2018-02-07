@@ -7214,6 +7214,18 @@ h4.title {
     display: none; }
 
   #main-wrapper {
-    margin-top: 80px; } }
+    margin-top: 80px; }
+
+  #register-container {
+    margin: 0 auto; }
+
+  #login-box {
+    margin: 0 auto; }
+
+  #login-container {
+    margin: 0 auto; }
+
+  #register-box {
+    margin: 0 auto; } }
 
 /*# sourceMappingURL=main.css.map */

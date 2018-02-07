@@ -22,12 +22,12 @@ class Login extends Component {
 
     render() {
         if (this.state.isConnected === true) {
-            return <Redirect to='/'/>
+              return <Redirect to='/'/>
         }
         return (
-            <div className='box col-sm-4 offset-sm-4 vcenter'>
-                <div className='box-form'>
-                    <div className='box-login'>
+            <div id="login-container" className={`box col-sm-4 vcenter ${this.state.isConnected ? 'offset-sm-4' : 'offset-sm-9'}`}>
+                <div id="login-box" className='box-form'>
+                    <div className='box-login' >
                         <div className='fieldset-body' id='login_form'>
                             <form onSubmit={this.handleSubmit}>
                                 <br/>
