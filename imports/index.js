@@ -12,3 +12,16 @@ const store = createStore(reducers, applyMiddleware(apiMiddleware));
 Meteor.startup(() => {
     ReactDOM.render(<Provider store={store}><App/></Provider>, document.getElementById('render-target'));
 });
+// @todo merge state from parents components to dispatch into children
+window.globalState = store.getState();
+
+
+window.successRequestHandler = (innerText) =>  {
+    $('#notification-bar').addClass('alert alert-success').html(innerText).show('slow');
+    setTimeout(() => { $('#notification-bar').removeClass('alert alert-success').html('').hide('slow'); }, 3000);
+};
+
+window.errorRequestHandler = (innerText) =>  {
+    $('#notification-bar').addClass('alert alert-danger').html(innerText).show('slow');
+    setTimeout(() => { $('#notification-bar').removeClass('alert alert-danger').html('').hide('slow'); }, 3000);
+};
