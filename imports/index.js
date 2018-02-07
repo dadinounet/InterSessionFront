@@ -25,3 +25,9 @@ window.errorRequestHandler = (innerText) =>  {
     $('#notification-bar').addClass('alert alert-danger').html(innerText).show('slow');
     setTimeout(() => { $('#notification-bar').removeClass('alert alert-danger').html('').hide('slow'); }, 3000);
 };
+
+window.storeUser = (userData) => {
+    localStorage.setItem('user', JSON.stringify(userData));
+};
+
+window.retrieveStoredUser = () => localStorage.getItem('user');
