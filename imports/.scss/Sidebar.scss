@@ -14,8 +14,8 @@
       background: transparent;
       border: none;
     }
-    .item.nav-item {
-      color: #037bb5;
+    li.nav-item * {
+      color: #037bb5 !important;
       i {
         vertical-align: sub;
       }

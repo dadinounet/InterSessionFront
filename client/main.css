@@ -6542,9 +6542,9 @@ html, body {
     text-decoration: none;
     background: transparent;
     border: none; }
-  #navbar header .item.nav-item {
-    color: #037bb5; }
-    #navbar header .item.nav-item i {
+  #navbar header li.nav-item * {
+    color: #037bb5 !important; }
+    #navbar header li.nav-item * i {
       vertical-align: sub; }
   #navbar header .navbar-header .navbar-toggle i {
     vertical-align: sub; }

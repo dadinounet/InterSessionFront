@@ -1,9 +1,12 @@
 
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
+import LeftSideItem from './LeftSideItem';
+
 
 class Navbar extends Component {
 
-    isLogged = false;
+    isLogged = true;
 
     constructor(props) {
         super(props);
@@ -23,9 +26,10 @@ class Navbar extends Component {
                             </div>
                             <div id="navbar-collapse" className="collapse navbar-collapse">
                                 <ul className="nav navbar-nav navbar-right">
-                                    <li><div className="item nav-item"><i className="material-icons list-icon">dashboard</i> Register</div></li>
-                                    <li><div className="item nav-item"><i className="material-icons list-icon">input</i> Login</div></li>
-                                    {this.isLogged ? <li><div className="item nav-item"><i className="material-icons">history</i> Historique</div></li> : ''}
+                                    {this.isLogged ? '' : <li className="nav-item"><Link to={`/register`}><LeftSideItem icon="person_add" label="Register" class="item"/></Link></li>}
+                                    {this.isLogged ? <li className="nav-item"><Link to={`/logout`}><LeftSideItem icon="exit_to_app" label="Logout" class="item"/></Link></li> : <li className="nav-item"><Link to={`/login`}><LeftSideItem icon="input" label="Login" class={"item"}/></Link></li>}
+                                    <li className="nav-item"><Link to={`/scanner`}><LeftSideItem icon="format_list_bulleted" label="List" class="item"/></Link></li>
+                                    <li className="nav-item"><a target="_blank" href="https://paypal.me/itakedemy"><LeftSideItem icon="payment" label="Donate" class="item"/></a></li>
                                 </ul>
                             </div>
                         </div>
