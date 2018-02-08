@@ -1,6 +1,7 @@
 import {combineReducers} from 'redux';
 import {REQUEST_USER_LOGIN, USER_LOGIN, ERROR_USER_LOGIN} from './UserLoginActions';
 import {REQUEST_USER_REGISTER, USER_REGISTER, ERROR_USER_REGISTER} from './UserRegisterActions';
+import {REQUEST_USER_LOGOUT} from './UserLogoutActions';
 
 const loginInitialState = {
     email: '',
@@ -31,6 +32,8 @@ function userReducer(state = loginInitialState, action) {
             return Object.assign({}, state, {
                 error: true
             });
+        case REQUEST_USER_LOGOUT:
+            return state;
         default:
             return state
     }
