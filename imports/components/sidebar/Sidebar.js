@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import LeftSidebar from "./LeftSidebar";
 import RightSidebar from "./RightSidebar";
-import Navbar from "./Navbar";
+import {connect} from "react-redux";
 
 class Sidebar extends Component {
     isLogged = true;
@@ -13,10 +13,16 @@ class Sidebar extends Component {
         return (
             <div id="sidebar">
                 <LeftSidebar/>
-                {this.isLogged ? <RightSidebar/> : ''}
+                {this.props.user.isAuthenticated ? <RightSidebar/> : ''}
             </div>
         )
     }
 }
 
-export default Sidebar;
+const mapStateToProps = (state) => {
+    return {
+        user: state.userReducer
+    };
+};
+
+export default connect(mapStateToProps)(Sidebar);

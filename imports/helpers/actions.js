@@ -41,7 +41,7 @@ function UserLoginError(userInfo, json) {
 export function connectUser(userInfo) {
     return function (dispatch) {
         dispatch(requestUserLogin(userInfo));
-        return fetch(`http://httpbin.org/status/403`)
+        return fetch(`http://httpbin.org/get`)
             .then(handleErrors)
             .then(response => response.json())
             .then(json => dispatch(UserLogin(userInfo, json)))
