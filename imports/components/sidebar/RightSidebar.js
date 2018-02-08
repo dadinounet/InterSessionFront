@@ -16,7 +16,17 @@ class RightSidebar extends Component {
                 "title": "js 1",
                 "desc": "super test pour votre code php",
                 'testDate': "2018-12-05"
-            }, {"title": " Php 1", "desc": "super test pour votre code php", 'testDate': "2018-12-05"}],
+            }, {"title": " Php 1", "desc": "super test pour votre code php", 'testDate': "2018-12-05"},{
+                "title": "test Php 1",
+                "desc": "super test pour votre code php",
+                'testDate': "2018-12-05"
+            }, {
+                "title": "js 1",
+                "desc": "super test pour votre code php",
+                'testDate': "2018-12-05"
+            }, {"title": " Php 1",
+                "desc": "super test pour votre code php",
+                'testDate': "2018-12-05"}],
             previousTest : [{
                 "title": "test Php 1",
                 "desc": "super test pour votre code php",
@@ -25,7 +35,19 @@ class RightSidebar extends Component {
                 "title": "js 1",
                 "desc": "super test pour votre code php",
                 'testDate': "2018-12-05"
-            }, {"title": " Php 1", "desc": "super test pour votre code php", 'testDate': "2018-12-05"}]
+            }, {"title": " Php 1",
+                "desc": "super test pour votre code php",
+                'testDate': "2018-12-05"},{
+                "title": "test Php 1",
+                "desc": "super test pour votre code php",
+                'testDate': "2018-12-05"
+            }, {
+                "title": "js 1",
+                "desc": "super test pour votre code php",
+                'testDate': "2018-12-05"
+            }, {"title": " Php 1",
+                "desc": "super test pour votre code php",
+                'testDate': "2018-12-05"}]
         };
 
         this.filterList = this.filterList.bind(this);

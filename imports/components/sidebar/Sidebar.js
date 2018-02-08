@@ -13,7 +13,7 @@ class Sidebar extends Component {
         return (
             <div id="sidebar">
                 <LeftSidebar/>
-                {this.isLogged ? <RightSidebar/> : ''}
+                {this.isLogged ? <RightSidebar /> : ''}
             </div>
         )
     }
