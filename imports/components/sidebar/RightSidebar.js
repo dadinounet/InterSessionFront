@@ -6,20 +6,40 @@ class RightSidebar extends Component {
     constructor(props) {
         super(props);
 
+        //todo fetch test from login xhrCall
         this.state = {
-            baseTest: [],
-            filtredTest: [],
+            baseTest: [{
+                "title": "test Php 1",
+                "desc": "super test pour votre code php",
+                'testDate': "2018-12-05"
+            }, {
+                "title": "js 1",
+                "desc": "super test pour votre code php",
+                'testDate': "2018-12-05"
+            }, {"title": " Php 1", "desc": "super test pour votre code php", 'testDate': "2018-12-05"}],
+            previousTest : [{
+                "title": "test Php 1",
+                "desc": "super test pour votre code php",
+                'testDate': "2018-12-05"
+            }, {
+                "title": "js 1",
+                "desc": "super test pour votre code php",
+                'testDate': "2018-12-05"
+            }, {"title": " Php 1", "desc": "super test pour votre code php", 'testDate': "2018-12-05"}]
+        };
+
         this.filterList = this.filterList.bind(this);
     }
 
     filterList (event) {
+        console.log(this.state);
         let updatedList = this.state.baseTest;
 
         updatedList = updatedList.filter(function(item){
             return item.title.toLowerCase().search(
                 event.target.value.toLowerCase()) !== -1;
         });
-        this.setState({filtredTest: updatedList});
+        this.setState({previousTest: updatedList});
     }
 
     render() {
@@ -42,7 +62,7 @@ class RightSidebar extends Component {
                         <td colSpan="2" className="type"><i className="material-icons">person</i> Current user</td>
                     </tr>
 
-                    {this.state.filtredTest.map((item, index) => {
+                    {this.state.previousTest.map((item, index) => {
                         return <HistoriqueItem key={index} test={item}/>;
                     })}
                     </tbody>
