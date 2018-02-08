@@ -9,8 +9,6 @@ class Login extends Component {
         email: '',
         password: '',
         rememberMe: true,
-        loginError: null,
-        isConnected: true
     };
 
     handleSubmit = (event) => {
