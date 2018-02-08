@@ -6836,6 +6836,9 @@ input[type=checkbox] {
     margin-left: 14px;
     margin-top: 15px; }
 
+#rightSidebar {
+  overflow-y: scroll; }
+
 .right {
   color: #a9a9a9;
   float: left !important;
@@ -6850,6 +6853,8 @@ input[type=checkbox] {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23); }
   .right table {
     color: #616161; }
+    .right table tbody {
+      overflow: scroll; }
     .right table .input-field input[type=search] {
       background: transparent;
       text-align: center; }

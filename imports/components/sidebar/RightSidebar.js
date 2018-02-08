@@ -5,19 +5,24 @@ class RightSidebar extends Component {
 
     constructor(props) {
         super(props);
+
+        this.state = {
+            baseTest: [],
+            filtredTest: [],
+        this.filterList = this.filterList.bind(this);
+    }
+
+    filterList (event) {
+        let updatedList = this.state.baseTest;
+
+        updatedList = updatedList.filter(function(item){
+            return item.title.toLowerCase().search(
+                event.target.value.toLowerCase()) !== -1;
+        });
+        this.setState({filtredTest: updatedList});
     }
 
     render() {
-        let previousTest = [{
-            "title": "test Php 1",
-            "desc": "super test pour votre code php",
-            'testDate': "2018-12-05"
-        }, {
-            "title": "test Php 1",
-            "desc": "super test pour votre code php",
-            'testDate': "2018-12-05"
-        }, {"title": "test Php 1", "desc": "super test pour votre code php", 'testDate': "2018-12-05"}];
-
         return (
             <div id="rightSidebar" className="right">
                 <table className="table">
@@ -25,7 +30,7 @@ class RightSidebar extends Component {
                     <tr className="input-field">
                         <td className="search col-md-9">
                             <div className="inner-addon right-addon">
-                                <input className="col-md-12" type="search" placeholder="Search"/>
+                                <input className="col-md-12" type="search" placeholder="Search" onChange={this.filterList}/>
                                 <i className="material-icons">search</i>
                             </div>
                         </td>
@@ -37,7 +42,7 @@ class RightSidebar extends Component {
                         <td colSpan="2" className="type"><i className="material-icons">person</i> Current user</td>
                     </tr>
 
-                    {previousTest.map((item, index) => {
+                    {this.state.filtredTest.map((item, index) => {
                         return <HistoriqueItem key={index} test={item}/>;
                     })}
                     </tbody>
