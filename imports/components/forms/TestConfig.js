@@ -10,15 +10,17 @@ class TestConfig extends Component {
 
     state = {
         github: '',
-        test1: true,
-        test2: true,
-        test3: true,
-        test4: true,
+        TestPhploc: 1,
+        TestPhpmd: 1,
+        TestSecurityChecker: 1,
+        TestPHPmnd: 1,
+        TestPhpcodesniffer: 1,
+        TestPhpcpd: 1
     };
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.props.submitGithubLink(this.state);
+        this.props.submitGithubLink(Object.assign({}, this.state, {token: this.props.user.token}));
     };
 
     render() {
@@ -38,17 +40,23 @@ class TestConfig extends Component {
                                 <span className="form-bar"/>
                                 <label className="float-label" htmlFor="github-link">Enter your Github link</label>
                                 <p><input type="checkbox" className="checkbox" onChange={(event) => {
-                                    this.setState({test1: !!event.target.checked})
-                                }} checked={this.state.test1 ? "checked" : ""}/>Test 1</p>
+                                    this.setState({TestPhploc: !!event.target.checked ? 1 : 0})
+                                }} checked={this.state.TestPhploc ? "checked" : ""}/>Test Phploc</p>
                                 <p><input type="checkbox" className="checkbox" onChange={(event) => {
-                                    this.setState({test2: !!event.target.checked})
-                                }} checked={this.state.test2 ? "checked" : ""}/> Test 2</p>
+                                    this.setState({TestPhpmd: !!event.target.checked ? 1 : 0})
+                                }} checked={this.state.TestPhpmd ? "checked" : ""}/>Test Phpmd</p>
                                 <p><input type="checkbox" className="checkbox" onChange={(event) => {
-                                    this.setState({test3: !!event.target.checked})
-                                }} checked={this.state.test3 ? "checked" : ""}/> Test 3</p>
+                                    this.setState({TestSecurityChecker: !!event.target.checked ? 1 : 0})
+                                }} checked={this.state.TestSecurityChecker ? "checked" : ""}/>Test SecurityChecker</p>
                                 <p><input type="checkbox" className="checkbox" onChange={(event) => {
-                                    this.setState({test4: !!event.target.checked})
-                                }} checked={this.state.test4 ? "checked" : ""}/> Test 4</p>
+                                    this.setState({TestPHPmnd: !!event.target.checked ? 1 : 0})
+                                }} checked={this.state.TestPHPmnd ? "checked" : ""}/>Test PHPmnd</p>
+                                <p><input type="checkbox" className="checkbox" onChange={(event) => {
+                                    this.setState({TestPhpcodesniffer: !!event.target.checked ? 1 : 0})
+                                }} checked={this.state.TestPhpcodesniffer ? "checked" : ""}/>Test Phpcodesniffer</p>
+                                <p><input type="checkbox" className="checkbox" onChange={(event) => {
+                                    this.setState({TestPhpcpd: !!event.target.checked ? 1 : 0})
+                                }} checked={this.state.TestPhpcpd ? "checked" : ""}/>Test Phpcpd</p>
                                 <p className="text-center">
                                     <input className="btn btn-primary" type="submit" id="do_login" value="START ANALYSIS" title="Get Started"/>
                                 </p>
@@ -63,7 +71,8 @@ class TestConfig extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        test: state.testReducer
+        test: state.testReducer,
+        user: state.userReducer
     };
 };
 

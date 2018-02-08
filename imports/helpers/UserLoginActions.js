@@ -22,7 +22,15 @@ function UserLogin(userInfo, json) {
     return {
         type: USER_LOGIN,
         userInfo,
-        data: json,
+        //data: json,
+        data: {
+            "success": {
+                "token": "eyJ0eXAiOiJK",
+                "name": "username",
+                "id": 1,
+                "connection_date_update": 1
+            }
+        },
         receivedAt: Date.now()
     }
 }

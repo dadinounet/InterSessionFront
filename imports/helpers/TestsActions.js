@@ -16,7 +16,17 @@ export function requestTestSuccess(testInfo, json) {
     return {
         type: REQUEST_TEST_SUCCESS,
         testInfo,
-        data: json,
+        //data: json,
+        data: {
+            "success": {
+                "phploc": "OK",
+                "phpmd": "OK",
+                "securityschecker": "OK",
+                "phpmnd": "NOT OK",
+                "phpcodesniffer": "OK",
+                "phpcpd": "OK"
+            }
+        },
         receivedAt: Date.now()
     }
 }
@@ -39,7 +49,8 @@ export function requestTest(testInfo) {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': testInfo.token,
             },
             body: JSON.stringify(testInfo)
         };

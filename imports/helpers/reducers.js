@@ -20,11 +20,15 @@ function userReducer(state = userInitialState, action) {
             return Object.assign({}, state, {});
         case USER_LOGIN:
             return Object.assign({}, state, {
+                id: action.data.success.id,
                 email: action.userInfo.email,
+                token: action.data.success.token,
                 isAuthenticated: true,
             });
         case USER_REGISTER:
             return Object.assign({}, state, {
+                id: action.data.success.id,
+                token: action.data.success.token,
                 isRegistered: true,
                 isAuthenticated: true,
             });
@@ -46,7 +50,8 @@ const testInitialTest = {
     test2: true,
     test3: true,
     test4: true,
-    isSubmitted: false
+    isSubmitted: false,
+    status: null
 };
 
 function testReducer(state = testInitialTest, action) {
@@ -56,6 +61,7 @@ function testReducer(state = testInitialTest, action) {
         case REQUEST_TEST_SUCCESS:
             return Object.assign({}, state, {
                 isSubmitted: true,
+                status: action.success,
             });
         case REQUEST_TEST_ERROR:
             return Object.assign({}, state, {
