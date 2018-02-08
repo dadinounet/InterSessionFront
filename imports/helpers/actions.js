@@ -1,5 +1,12 @@
 import fetch from 'cross-fetch'
 
+const handleErrors = (res) => {
+    if (!res.ok) {
+        throw res;
+    }
+    return res;
+};
+
 export const REQUEST_USER_LOGIN = 'REQUEST_USER_LOGIN';
 
 export function requestUserLogin(userInfo) {
@@ -34,12 +41,10 @@ function UserLoginError(userInfo, json) {
 export function connectUser(userInfo) {
     return function (dispatch) {
         dispatch(requestUserLogin(userInfo));
-        return fetch(`https://httpbin.org/get`)
-            .then(
-                response => response.json(),
-                error => console.log('An error occurred.', error)
-            )
-            .then(json => dispatch(UserLogin(userInfo, json))
-            )
+        return fetch(`http://httpbin.org/status/403`)
+            .then(handleErrors)
+            .then(response => response.json())
+            .then(json => dispatch(UserLogin(userInfo, json)))
+            .catch(error => dispatch(UserLoginError(userInfo, error)))
     }
 }
