@@ -1,12 +1,5 @@
 import fetch from "cross-fetch";
-
-// todo : importer dans un seul fichier cf UserLoginActions
-const handleErrors = (res) => {
-    if (!res.ok) {
-        throw res;
-    }
-    return res;
-};
+import handleErrors from './handleErrors';
 
 export const REQUEST_TEST = 'REQUEST_TEST';
 
