@@ -1,11 +1,5 @@
 import fetch from 'cross-fetch'
-
-const handleErrors = (res) => {
-    if (!res.ok) {
-        throw res;
-    }
-    return res;
-};
+import handleErrors from './handleErrors';
 
 export const REQUEST_USER_LOGIN = 'REQUEST_USER_LOGIN';
 
