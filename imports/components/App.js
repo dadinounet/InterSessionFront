@@ -48,6 +48,7 @@ class App extends React.Component {
                     <Navbar/>
                     <Sidebar/>
                     <div className="row"/>
+                    {/* todo : secure routes */}
                     <div id="main-wrapper" className="row">
                         <Route path="/login" render={() => <Forms userLogin={this.props.userLogin}/>}/>
                         <Route path="/register" render={() => <Forms userRegister={this.props.userRegister}/>}/>

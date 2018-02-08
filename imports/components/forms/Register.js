@@ -21,8 +21,8 @@ class Register extends Component {
     };
 
     render() {
-        if (this.state.isRegistered === true) {
-            return <Redirect to='/'/>
+        if (this.props.user.isRegistered === true) {
+            return <Redirect to='/scanner'/>
         }
         return (
             <div className="col-sm-4 offset-md-4 vcenter">

@@ -23,6 +23,7 @@ function userReducer(state = loginInitialState, action) {
         case USER_REGISTER:
             return Object.assign({}, state, {
                 isRegistered: true,
+                isAuthenticated: true,
             });
         case ERROR_USER_LOGIN:
         case ERROR_USER_REGISTER:
