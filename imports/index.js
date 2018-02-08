@@ -1,20 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {combineReducers, createStore, applyMiddleware} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
-import usersReducer from "./helpers/usersReducer";
-import apiMiddleware from "./middlewares/apiMiddleware";
 import App from './components/App';
+import rootReducer from "./helpers/reducers";
+import thunkMiddleware from 'redux-thunk'
 
-const reducers = combineReducers({users: usersReducer});
-const store = createStore(reducers, applyMiddleware(apiMiddleware));
+
 
 Meteor.startup(() => {
+    const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
     ReactDOM.render(<Provider store={store}><App/></Provider>, document.getElementById('render-target'));
 });
-// @todo merge state from parents components to dispatch into children
-window.globalState = store.getState();
 
+// @todo merge state from parents components to dispatch into children
 
 window.successRequestHandler = (innerText) =>  {
     $('#notification-bar').addClass('alert alert-success').html(innerText).show('slow');

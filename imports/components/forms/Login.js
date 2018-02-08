@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {connectUser} from "../../helpers/actions";
 
 class Login extends Component {
 
@@ -21,11 +23,11 @@ class Login extends Component {
     }
 
     render() {
-        if (this.state.isConnected === true) {
+        if (this.props.user.isAuthenticated === true) {
               return <Redirect to='/scanner'/>
         }
         return (
-            <div id="login-container" className={`box col-sm-4 vcenter ${this.state.isConnected ? 'offset-sm-4' : 'offset-sm-9'}`}>
+            <div id="login-container" className={`box col-sm-4 vcenter ${this.props.user.isAuthenticated ? 'offset-sm-4' : 'offset-sm-9'}`}>
                 <div id="login-box" className='box-form'>
                     <div className='box-login' >
                         <div className='fieldset-body' id='login_form'>
@@ -62,4 +64,18 @@ class Login extends Component {
     }
 }
 
-export default Login;
+const mapStateToProps = (state) => {
+    return {
+        user: state.userReducer
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        userLogin: (userForm) => {
+            dispatch(connectUser(userForm));
+        }
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
