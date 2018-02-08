@@ -14,7 +14,9 @@ function userReducer(state = loginInitialState, action) {
         case REQUEST_USER_LOGIN:
             return Object.assign({}, state, {});
         case USER_LOGIN:
+            console.log(1926, action);
             return Object.assign({}, state, {
+                email: action.userInfo.email,
                 isAuthenticated: true,
             });
         case ERROR_USER_LOGIN:

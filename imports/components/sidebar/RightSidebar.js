@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import HistoriqueItem from "./HistoriqueItem";
+import {connect} from "react-redux";
 
 class RightSidebar extends Component {
 
@@ -34,7 +35,7 @@ class RightSidebar extends Component {
                         </th>
                     </tr>
                     <tr>
-                        <td colSpan="2" className="type"><i className="material-icons">person</i> Current user</td>
+                        <td colSpan="2" className="type"><i className="material-icons">person</i> {this.props.user.email} </td>
                     </tr>
 
                     {previousTest.map((item, index) => {
@@ -47,4 +48,10 @@ class RightSidebar extends Component {
     }
 }
 
-export default RightSidebar;
+const mapStateToProps = (state) => {
+    return {
+        user: state.userReducer
+    };
+};
+
+export default connect(mapStateToProps)(RightSidebar);
