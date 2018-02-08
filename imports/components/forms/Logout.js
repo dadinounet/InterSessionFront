@@ -9,7 +9,7 @@ class Logout extends Component {
     }
 
     componentWillMount() {
-        this.props.userLogout();
+        this.props.userLogout(this.props.user.token);
     }
 
     render() {
@@ -25,8 +25,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        userLogout: () => {
-            dispatch(disconnectUser());
+        userLogout: (token) => {
+            dispatch(disconnectUser(token));
         }
     }
 };
