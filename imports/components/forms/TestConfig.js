@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {requestTest} from "../../helpers/TestsActions";
+import {connect} from "react-redux";
 
 class TestConfig extends Component {
 
@@ -59,4 +61,18 @@ class TestConfig extends Component {
     }
 }
 
-export default TestConfig;
+const mapStateToProps = (state) => {
+    return {
+        test: state.testReducer
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        submitGithubLink: (testInfo) => {
+            dispatch(requestTest(testInfo));
+        }
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(TestConfig);
