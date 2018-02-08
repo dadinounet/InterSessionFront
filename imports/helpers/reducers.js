@@ -6,6 +6,7 @@ const loginInitialState = {
     email: '',
     token: '',
     isAuthenticated: false,
+    isRegistered: false,
     history: [],
     rememberMe: true
 };
