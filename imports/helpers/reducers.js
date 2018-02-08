@@ -33,7 +33,7 @@ function userReducer(state = loginInitialState, action) {
                 error: true
             });
         case REQUEST_USER_LOGOUT:
-            return state;
+            return Object.assign({}, state, loginInitialState);
         default:
             return state
     }
