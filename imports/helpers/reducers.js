@@ -44,17 +44,19 @@ function userReducer(state = userInitialState, action) {
     }
 }
 
-const testInitialTest = {
+const testInitialState = {
     github: '',
-    test1: true,
-    test2: true,
-    test3: true,
-    test4: true,
+    TestPhploc: 1,
+    TestPhpmd: 1,
+    TestSecurityChecker: 1,
+    TestPHPmnd: 1,
+    TestPhpcodesniffer: 1,
+    TestPhpcpd: 1
     isSubmitted: false,
     status: null
 };
 
-function testReducer(state = testInitialTest, action) {
+function testReducer(state = testInitialState, action) {
     switch (action.type) {
         case REQUEST_TEST:
             return Object.assign({}, state, {});
