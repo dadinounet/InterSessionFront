@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
+import {connect} from "react-redux";
+import {registerUser} from "../../helpers/UserRegisterActions";
 
 class Register extends Component {
 
@@ -10,9 +12,7 @@ class Register extends Component {
     state = {
         email: '',
         password: '',
-        passwordRepeat: '',
-        registerError: null,
-        isRegistered: false
+        passwordRepeat: ''
     };
 
     handleSubmit = (event) => {
@@ -68,4 +68,18 @@ class Register extends Component {
     }
 }
 
-export default Register;
+const mapStateToProps = (state) => {
+    return {
+        user: state.userReducer
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        userRegister: (userForm) => {
+            dispatch(registerUser(userForm));
+        },
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Register);

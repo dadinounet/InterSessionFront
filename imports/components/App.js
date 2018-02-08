@@ -67,12 +67,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        userLogin: (user) => {
-            dispatch({type: 'HTTP_REQUEST_USER_LOGIN', data: user});
-        },
-        userRegister: (user) => {
-            dispatch({type: 'HTTP_REQUEST_USER_REGISTER', data: user});
-        },
         submitGithubLink: (github) => {
             dispatch({type: 'HTTP_REQUEST_GITHUB', data: github});
         }

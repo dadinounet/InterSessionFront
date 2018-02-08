@@ -49,7 +49,7 @@ export function connectUser(userInfo) {
             },
             body: JSON.stringify(userInfo)
         };
-        return fetch(`http://httpbin.org/status/403`, postMessage)
+        return fetch(`http://httpbin.org/post`, postMessage)
             .then(handleErrors)
             .then(response => response.json())
             .then(json => dispatch(UserLogin(userInfo, json)))
