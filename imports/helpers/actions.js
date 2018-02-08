@@ -41,7 +41,15 @@ function UserLoginError(userInfo, json) {
 export function connectUser(userInfo) {
     return function (dispatch) {
         dispatch(requestUserLogin(userInfo));
-        return fetch(`http://httpbin.org/get`)
+        const postMessage = {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(userInfo)
+        };
+        return fetch(`http://httpbin.org/status/403`, postMessage)
             .then(handleErrors)
             .then(response => response.json())
             .then(json => dispatch(UserLogin(userInfo, json)))
