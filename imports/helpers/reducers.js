@@ -51,7 +51,7 @@ const testInitialState = {
     TestSecurityChecker: 1,
     TestPHPmnd: 1,
     TestPhpcodesniffer: 1,
-    TestPhpcpd: 1
+    TestPhpcpd: 1,
     isSubmitted: false,
     status: null
 };
