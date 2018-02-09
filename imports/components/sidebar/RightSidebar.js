@@ -10,40 +10,42 @@ class RightSidebar extends Component {
         //todo fetch test from login xhrCall
         this.state = {
             baseTest: [{
-                "title": "test Php 1",
+                "title": "PhpCodeSniffer",
                 "desc": "super test pour votre code php",
                 'testDate': "2018-12-05"
             }, {
-                "title": "js 1",
+                "title": "Phpcpd",
                 "desc": "super test pour votre code php",
                 'testDate': "2018-12-05"
-            }, {"title": " Php 1", "desc": "super test pour votre code php", 'testDate': "2018-12-05"},{
-                "title": "test Php 1",
+            }, {"title": "Phploc",
+                "desc": "super test pour votre code php",
+                'testDate': "2018-12-05"},{
+                "title": "PhpCodeSniffer",
                 "desc": "super test pour votre code php",
                 'testDate': "2018-12-05"
             }, {
-                "title": "js 1",
+                "title": "PHPmnd",
                 "desc": "super test pour votre code php",
                 'testDate': "2018-12-05"
-            }, {"title": " Php 1",
+            }, {"title": "PhpCodeSniffer",
                 "desc": "super test pour votre code php",
                 'testDate': "2018-12-05"}],
             previousTest : [{
-                "title": "test Php 1",
+                "title": "PhpCodeSniffer",
                 "desc": "super test pour votre code php",
                 'testDate': "2018-12-05"
             }, {
-                "title": "js 1",
+                "title": "Phpcpd",
                 "desc": "super test pour votre code php",
                 'testDate': "2018-12-05"
-            }, {"title": " Php 1",
+            }, {"title": "Phploc",
                 "desc": "super test pour votre code php",
                 'testDate': "2018-12-05"},{
                 "title": "test Php 1",
                 "desc": "super test pour votre code php",
                 'testDate': "2018-12-05"
             }, {
-                "title": "js 1",
+                "title": "PHPmnd",
                 "desc": "super test pour votre code php",
                 'testDate': "2018-12-05"
             }, {"title": " Php 1",
