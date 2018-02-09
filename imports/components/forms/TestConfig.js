@@ -25,6 +25,9 @@ class TestConfig extends Component {
     };
 
     render() {
+        if(this.props.test.isSubmitted) {
+            return <Redirect to="/await"/>
+        }
         if (!this.props.user.isAuthenticated) {
             return <Redirect to="/login"/>
         }

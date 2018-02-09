@@ -69,6 +69,8 @@ function testReducer(state = testInitialState, action) {
             return Object.assign({}, state, {
                 error: true
             });
+        case REQUEST_USER_LOGOUT:
+            return Object.assign({}, state, testInitialState);
         default:
             return state
     }
