@@ -25,7 +25,7 @@ class Register extends Component {
             return <Redirect to='/scanner'/>
         }
         return (
-            <div className="col-sm-4 offset-md-4 vcenter">
+            <div className="col-sm-6 col-md-4 offset-md-4 offset-lg-5 vcenter" id="register-container-box">
                 <div className='box'>
                     <div className='box-form'>
                         <div className='box-login-title'>

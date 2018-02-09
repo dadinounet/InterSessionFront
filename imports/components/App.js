@@ -6,6 +6,7 @@ import Navbar from "./sidebar/Navbar";
 import Login from "./forms/Login";
 import Register from "./forms/Register";
 import Logout from "./forms/Logout";
+import CardPanel from "./results/CardPanel";
 
 class App extends React.Component {
     render() {
@@ -14,7 +15,6 @@ class App extends React.Component {
                 <main className="container-fluid">
                     <Navbar/>
                     <Sidebar/>
-                    <div className="row"/>
                     <div id="main-wrapper" className="row">
                         <div className="row align-self-center" id="securityScanner_forms">
                             {/*todo : secure routes*/}
@@ -22,8 +22,9 @@ class App extends React.Component {
                             <Route path="/login" component={Login}/>
                             <Route path="/logout" component={Logout}/>
                             <Route path="/register" component={Register}/>
-                            <Route path="/scanner" component={TestConfig}/>
                         </div>
+                        <Route path="/test" component={CardPanel}/>
+                        <Route path="/scanner" component={TestConfig}/>
                     </div>
                 </main>
             </BrowserRouter>);

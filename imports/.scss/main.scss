@@ -36,8 +36,13 @@ html, body {
 // MEDIAS
 
 @media screen and (max-width: 945px) {
+  #register-container-box {
+    margin: 0 auto;
+    width: 320px;
+  }
   #navbar {
     display: block;
+    z-index: 30;
   }
   #sidebar {
     display: none;
@@ -53,7 +58,6 @@ html, body {
     margin: 0 auto;
   }
   #login-container {
-    margin: 0 auto;
   }
   #register-box {
     margin: 0 auto;

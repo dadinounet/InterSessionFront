@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {requestTest} from "../../helpers/TestsActions";
 import {connect} from "react-redux";
+import {Redirect} from 'react-router-dom';
 
 class TestConfig extends Component {
 
@@ -24,6 +25,9 @@ class TestConfig extends Component {
     };
 
     render() {
+        if (!this.props.user.isAuthenticated) {
+            return <Redirect to="/login"/>
+        }
         return (
             <div className="col-sm-8 offset-sm-2 align-self-center vcenter">
                 <div className="card">
@@ -39,27 +43,29 @@ class TestConfig extends Component {
                                 <span className="form-highlight"/>
                                 <span className="form-bar"/>
                                 <label className="float-label" htmlFor="github-link">Enter your Github link</label>
-                                <p><input type="checkbox" className="checkbox" onChange={(event) => {
-                                    this.setState({TestPhploc: !!event.target.checked ? 1 : 0})
-                                }} checked={this.state.TestPhploc ? "checked" : ""}/>Test Phploc</p>
-                                <p><input type="checkbox" className="checkbox" onChange={(event) => {
-                                    this.setState({TestPhpmd: !!event.target.checked ? 1 : 0})
-                                }} checked={this.state.TestPhpmd ? "checked" : ""}/>Test Phpmd</p>
-                                <p><input type="checkbox" className="checkbox" onChange={(event) => {
-                                    this.setState({TestSecurityChecker: !!event.target.checked ? 1 : 0})
-                                }} checked={this.state.TestSecurityChecker ? "checked" : ""}/>Test SecurityChecker</p>
-                                <p><input type="checkbox" className="checkbox" onChange={(event) => {
-                                    this.setState({TestPHPmnd: !!event.target.checked ? 1 : 0})
-                                }} checked={this.state.TestPHPmnd ? "checked" : ""}/>Test PHPmnd</p>
-                                <p><input type="checkbox" className="checkbox" onChange={(event) => {
-                                    this.setState({TestPhpcodesniffer: !!event.target.checked ? 1 : 0})
-                                }} checked={this.state.TestPhpcodesniffer ? "checked" : ""}/>Test Phpcodesniffer</p>
-                                <p><input type="checkbox" className="checkbox" onChange={(event) => {
-                                    this.setState({TestPhpcpd: !!event.target.checked ? 1 : 0})
-                                }} checked={this.state.TestPhpcpd ? "checked" : ""}/>Test Phpcpd</p>
-                                <p className="text-center">
-                                    <input className="btn btn-primary" type="submit" id="do_login" value="START ANALYSIS" title="Get Started"/>
-                                </p>
+                                <div className="checkbox-container">
+                                    <p><input type="checkbox" className="checkbox" onChange={(event) => {
+                                        this.setState({TestPhploc: !!event.target.checked ? 1 : 0})
+                                    }} checked={this.state.TestPhploc ? "checked" : ""}/>Test Phploc</p>
+                                    <p><input type="checkbox" className="checkbox" onChange={(event) => {
+                                        this.setState({TestPhpmd: !!event.target.checked ? 1 : 0})
+                                    }} checked={this.state.TestPhpmd ? "checked" : ""}/>Test Phpmd</p>
+                                    <p><input type="checkbox" className="checkbox" onChange={(event) => {
+                                        this.setState({TestSecurityChecker: !!event.target.checked ? 1 : 0})
+                                    }} checked={this.state.TestSecurityChecker ? "checked" : ""}/>Test SecurityChecker</p>
+                                    <p><input type="checkbox" className="checkbox" onChange={(event) => {
+                                        this.setState({TestPHPmnd: !!event.target.checked ? 1 : 0})
+                                    }} checked={this.state.TestPHPmnd ? "checked" : ""}/>Test PHPmnd</p>
+                                    <p><input type="checkbox" className="checkbox" onChange={(event) => {
+                                        this.setState({TestPhpcodesniffer: !!event.target.checked ? 1 : 0})
+                                    }} checked={this.state.TestPhpcodesniffer ? "checked" : ""}/>Test Phpcodesniffer</p>
+                                    <p><input type="checkbox" className="checkbox" onChange={(event) => {
+                                        this.setState({TestPhpcpd: !!event.target.checked ? 1 : 0})
+                                    }} checked={this.state.TestPhpcpd ? "checked" : ""}/>Test Phpcpd</p>
+                                    <p className="text-center">
+                                        <input className="btn btn-primary" type="submit" id="do_login" value="START ANALYSIS" title="Get Started"/>
+                                    </p>
+                                </div>
                             </form>
                         </div>
                     </div>

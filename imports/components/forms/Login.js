@@ -25,7 +25,7 @@ class Login extends Component {
               return <Redirect to='/scanner'/>
         }
         return (
-            <div id="login-container" className={`box col-sm-4 vcenter ${this.props.user.isAuthenticated ? 'offset-sm-4' : 'offset-sm-9'}`}>
+            <div id="login-container" className={`box col-sm-4 vcenter ${!this.props.user.isAuthenticated ? 'offset-md-4 offset-lg-5' : 'offset-sm-9'}`}>
                 <div id="login-box" className='box-form'>
                     <div className='box-login' >
                         <div className='fieldset-body' id='login_form'>
