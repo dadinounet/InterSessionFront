@@ -6555,7 +6555,7 @@ html, body {
       vertical-align: sub; }
 
 #securityScanner_forms {
-  width: 100vh;
+  width: 100%;
   /* Texts */
   /* Containers */
   /* Forms */
@@ -6975,6 +6975,8 @@ h4.title {
     color: #999999; }
   .vcenter .card .card-content {
     padding: 15px 20px; }
+    .vcenter .card .card-content div.checkbox-container {
+      padding-top: 15px; }
   .vcenter .card .card-content .category {
     margin-bottom: 0; }
   .vcenter .card .card-header {
@@ -7228,8 +7230,13 @@ h4.title {
 
 /* -- Body style ------------------------------------ */
 @media screen and (max-width: 945px) {
+  #register-container-box {
+    margin: 0 auto;
+    width: 320px; }
+
   #navbar {
-    display: block; }
+    display: block;
+    z-index: 30; }
 
   #sidebar {
     display: none; }
@@ -7241,9 +7248,6 @@ h4.title {
     margin: 0 auto; }
 
   #login-box {
-    margin: 0 auto; }
-
-  #login-container {
     margin: 0 auto; }
 
   #register-box {
