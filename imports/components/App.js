@@ -6,7 +6,8 @@ import Navbar from "./sidebar/Navbar";
 import Login from "./forms/Login";
 import Register from "./forms/Register";
 import Logout from "./forms/Logout";
-import CardPanel from "./results/CardPanel";
+import Progressbar from "./forms/Progressbar";
+import Awaiting from "./forms/Awaiting";
 
 class App extends React.Component {
     render() {
@@ -23,7 +24,7 @@ class App extends React.Component {
                             <Route path="/logout" component={Logout}/>
                             <Route path="/register" component={Register}/>
                         </div>
-                        <Route path="/test" component={CardPanel}/>
+                        <Route path="/await" component={Awaiting}/>
                         <Route path="/scanner" component={TestConfig}/>
                     </div>
                 </main>
